@@ -2,6 +2,7 @@
 
 namespace App\Observers;
 
+use App\Events\EventReceived;
 use App\Models\IncomingEvent;
 
 class IncomingEventObserver
@@ -11,6 +12,6 @@ class IncomingEventObserver
         $incomingEvent->status = 'pending';
         $incomingEvent->save();
 
-        // dispatch event here
+        EventReceived::dispatch($incomingEvent);
     }
 }
