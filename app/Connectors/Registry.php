@@ -1,8 +1,7 @@
 <?php
 
-namespace App;
+namespace App\Connectors;
 
-use App\Connectors\ExampleConnector;
 use App\Models\IncomingEvent;
 
 class Registry

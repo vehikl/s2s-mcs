@@ -2,8 +2,8 @@
 
 namespace App\Listeners;
 
+use App\Connectors\Registry;
 use App\Events\EventReceived;
-use App\Registry;
 
 class ProcessEvent
 {
