@@ -15,7 +15,7 @@ class EventReceived
     {
     }
 
-    public function getEvent(): IncomingEvent
+    public function getIncomingEventModel(): IncomingEvent
     {
         return $this->event;
     }
