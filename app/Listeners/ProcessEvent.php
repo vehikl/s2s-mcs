@@ -2,24 +2,12 @@
 
 namespace App\Listeners;
 
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
+use App\Events\EventReceived;
 
 class ProcessEvent
 {
-    /**
-     * Create the event listener.
-     */
-    public function __construct()
+    public function handle(EventReceived $event): void
     {
-        //
-    }
-
-    /**
-     * Handle the event.
-     */
-    public function handle(object $event): void
-    {
-        //
+        // handle event in here
     }
 }
