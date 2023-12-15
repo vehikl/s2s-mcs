@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\Models;
+namespace Tests\Feature\Events\Models;
 
 use App\Models\IncomingEvent;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
