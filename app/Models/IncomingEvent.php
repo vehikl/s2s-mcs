@@ -16,4 +16,9 @@ class IncomingEvent extends Model
     {
         return $this->hasMany(OutgoingRequest::class, 'event_id');
     }
+
+    public function getUtmMedium(): ?string
+    {
+        return optional(json_decode($this->data)->utms)->utm_medium;
+    }
 }

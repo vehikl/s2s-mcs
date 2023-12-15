@@ -7,15 +7,15 @@ use App\Models\IncomingEvent;
 class Registry
 {
     protected array $registered = [
-        ExampleConnector::class,
+        Kendago::class,
     ];
 
     public function handleEvent(IncomingEvent $event): void
     {
         foreach ($this->registered as $affiliate) {
-            $tracker = app($affiliate);
+            $tracker = app($affiliate, ['event' => $event]);
 
-            $tracker->handleEvent($event);
+            $tracker->handleEvent();
         }
     }
 }
