@@ -13,6 +13,15 @@ abstract class S2SConnectorContract
         $this->event = $event;
     }
 
+    public function handleEvent(): bool
+    {
+        if ($this->shouldTrack()) {
+            return $this->sendEvent();
+        };
+
+        return false;
+    }
+
     abstract public function shouldTrack(): bool;
 
     abstract public function sendEvent(): bool;
